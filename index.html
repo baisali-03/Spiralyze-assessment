@@ -294,12 +294,10 @@
             <img class="video-bac" src="img/video-bac.png" />
             <img class="video-bac video-bac2" src="img/video-bac-2.png" />
         </div>
-        <div class="video-img" onclick="playPause()">
-            <video id="myVideo" class="bac" width="320" height="240">
-                <source src="video/video.mp4" type="video/mp4">
-            </video>
-            <span class="play" href="#">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+        <div class="video-img" onclick="openVideoModal()" >
+            <img class="video-preview" src="./img/videoPreview.png" alt="Video Preview">
+            <span class="play">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
                     class="bi bi-play-fill" viewBox="0 0 16 16">
                     <path
                         d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393z" />
@@ -308,6 +306,17 @@
             <img class="sm-logo" src="img/logo.svg" />
         </div>
     </section>
+
+    <!-- Video Popup Modal -->
+    <div id="videoModal" class="video-modal" style="display:none;">
+        <div class="video-modal-content">
+            <span class="video-modal-close" onclick="closeVideoModal()">&times;</span>
+            <video id="popupVideo" width="640" height="360" controls>
+                <source src="video/video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
 
     <!-- FOOTER SECTION -->
     <section class="footer">

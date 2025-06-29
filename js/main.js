@@ -90,3 +90,25 @@ $(document).click(function(){
   });
  
   document.getElementById("year").textContent = new Date().getFullYear();
+
+
+   //-------------------Video Modal------------------------
+        function openVideoModal() {
+            var modal = document.getElementById('videoModal');
+            var video = document.getElementById('popupVideo');
+            modal.style.display = 'flex';
+            video.currentTime = 0;
+            video.play();
+        }
+        function closeVideoModal() {
+            var modal = document.getElementById('videoModal');
+            var video = document.getElementById('popupVideo');
+            video.pause();
+            modal.style.display = 'none';
+        }
+        window.onclick = function (event) {
+            var modal = document.getElementById('videoModal');
+            if (event.target === modal) {
+                closeVideoModal();
+            }
+        }

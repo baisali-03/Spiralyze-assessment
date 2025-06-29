@@ -257,7 +257,7 @@
         top: -26%;
         left: -13%;
         width: 124%;
-        height: 127%;
+        height: 137%;
         z-index: -1;
         transform: rotate(90deg);
     }
@@ -534,6 +534,6 @@
 @media (min-width: 0px) and (max-width: 360px) {
     .video-sec .txt .video-bac, .video-sec .txt .video-bac2{
         width: 255%;
-        height: 175%;
+        height: 148%;
     }
 }
