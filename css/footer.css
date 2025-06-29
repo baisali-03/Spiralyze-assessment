@@ -1,0 +1,59 @@
+/* =========================
+   FOOTER
+   ========================= */
+.footer {
+  background-color: #EAEAEA;
+  padding: 38px 0px;
+}
+.footer .container-cus {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .copy {
+  font-size: 14px;
+  line-height: 24px;
+  color: #757575;
+}
+.footer ul {}
+.footer ul li {
+  display: inline-block;
+  padding: 0px 14px;
+  position: relative;
+}
+.footer ul li:first-child::after {
+  width: 0px;
+}
+.footer ul li:last-child {
+  padding-right: 0px;
+}
+.footer ul li::after {
+  content: '';
+  height: 17px;
+  width: 1px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  bottom: 0px;
+  margin: auto;
+  background: #999999;
+}
+.footer ul li a {
+  color: #757575;
+  font-size: 14px;
+  line-height: 24px;
+}
+.footer ul li a:hover {
+  text-decoration: underline;
+}
+.thanks {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  text-align: center;
+  height: 47px;
+}

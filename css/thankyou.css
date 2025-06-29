@@ -1,0 +1,49 @@
+/* =========================
+   THANK YOU PAGE
+   ========================= */
+.thankyou-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f9f9f9;
+}
+.thankyou-box {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 32px rgba(25, 77, 68, 0.08);
+  padding: 48px 32px 40px 32px;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+}
+.thankyou-box img {
+  width: 200px;
+  margin-bottom: 24px;
+}
+.thankyou-box h1 {
+  font-size: 2.5rem;
+  font-family: 'montserratextrabold', 'Montserrat', sans-serif;
+  color: var(--mediumblue);
+  margin-bottom: 16px;
+  font-weight: 800;
+}
+.thankyou-box p {
+  font-size: 1.15rem;
+  color: var(--black);
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+.thankyou-box a.home-btn {
+  display: inline-block;
+  padding: 12px 32px;
+  background: var(--lightblue);
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1rem;
+}
+.thankyou-box a.home-btn:hover {
+  background: var(--mediumblue);
+}

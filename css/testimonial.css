@@ -1,0 +1,83 @@
+
+/* =========================
+   TESTIMONIALS CAROUSEL
+   ========================= */
+.testi-carousel .container-cus {
+  display: grid;
+  grid-template-columns: 10% 1fr 10%;
+  align-items: center;
+  margin-top: -50px;
+}
+.testi-carousel .arrow svg {
+  cursor: pointer;
+}
+.testi-carousel .arrow svg:hover path {
+  fill: var(--lightblue);
+}
+.testi-carousel .arrow-right {
+  text-align: right;
+}
+.testi-carousel .carousel-testi {
+  overflow: hidden;
+}
+.testi-carousel .carousel-testi .item {
+  display: grid;
+  grid-template-columns: 270px 1fr;
+  column-gap: 34px;
+  padding: 20px 2%;
+}
+.testi-carousel .carousel-testi .item .img {
+  overflow: hidden;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  box-shadow: 0px 0px 20px rgb(17 17 17 / 8%);
+}
+.testi-carousel .carousel-testi .item .img img {
+  height: 100%;
+  object-fit: cover;
+}
+.testi-carousel .carousel-testi .item .txt {
+  box-shadow: 0px 0px 14px rgb(17 17 17 / 15%);
+  background-color: var(--darkblue);
+  color: #fff;
+  padding: 45px 65px;
+  padding-top: 62px;
+  overflow: hidden;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.testi-carousel .carousel-testi .item .txt .name {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 34px;
+  margin-bottom: 16px;
+}
+.testi-carousel .carousel-testi .item .txt .message {
+  font-style: italic;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 28px;
+}
+.testi-carousel .carousel-testi .item .txt .quote {
+  width: 60px;
+  position: absolute;
+  top: 40px;
+  right: 75px;
+}
+.testi-carousel .carousel-testi .owl-dots {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  column-gap: 36px;
+  margin-top: 56px;
+}
+.testi-carousel .carousel-testi .owl-dots .owl-dot span {
+  width: 16px;
+  height: 16px;
+  background: #EAEAEA;
+  display: block;
+  border-radius: 11px;
+}
+.testi-carousel .carousel-testi .owl-dots .owl-dot.active span {
+  background-color: var(--lightblue);
+}
