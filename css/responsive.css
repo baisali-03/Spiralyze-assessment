@@ -49,10 +49,10 @@
     .jumbo-box .form-box .form .sel {
         padding: 7px 11px;
     }
-    .jumbo-box .form-box .form .empty-tooltip{
+    .jumbo-box .form-box .form .empty-tooltp{
         padding: 12px 13px;
     }
-    .jumbo-box .form-box .form .empty-tooltip p {
+    .jumbo-box .form-box .form .empty-tooltp p {
         font-size: 12px;
         line-height: 14px;
     }
@@ -373,7 +373,7 @@
         font-size: 14px;
         padding-top: 14px;
     }
-    .jumbo-box .form-box .form .empty-tooltip{
+    .jumbo-box .form-box .form .empty-tooltp{
         left: 0px;
         right: 0px;
     }
