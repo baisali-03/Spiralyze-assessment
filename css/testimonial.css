@@ -43,6 +43,9 @@
   grid-template-columns: 270px 1fr;
   column-gap: 34px;
   padding: 20px 2%;
+  min-height: 340px;
+  height: 340px;
+  align-items: stretch;
 }
 .testi-carousel .carousel-testi .item .img {
   overflow: hidden;
