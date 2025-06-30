@@ -404,6 +404,7 @@ input:-webkit-autofill:active {
   margin-top: 41px;
   text-align: center;
 }
+
 .jumbo-box .form-box .form .btn-row a {
   width: 220px;
   height: 56px;
@@ -432,6 +433,9 @@ input:-webkit-autofill:active {
   border-radius: 4px;
   margin: auto;
   cursor: pointer;
+}
+.jumbo-box .form-box .form .btn-row .a:active {
+background-color: #35bb9c;
 }
 .jumbo-box .form-box .form .btn-row .a span {
   font-weight: 700;

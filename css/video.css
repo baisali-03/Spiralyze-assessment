@@ -1,21 +1,21 @@
-@media (max-width: 767px) {
-  .video-bac,
-  .video-bac2 {
-    display: none !important;
-  }
-
-  .video-bac-mobile,
-  .video-bac-mobile2 {
-    display: block !important;
-    width: 100%;
-    height: auto;
-    position: absolute;
-    top: -44px;
-    left: 0;
-    z-index: -1;
-  }
+/* =========================
+   FONT & ROOT VARIABLES
+   ========================= */
+@font-face {
+  font-family: 'montserratextrabold';
+  src: url('../fonts/montserrat-extrabold-webfont.woff2') format('woff2'),
+       url('../fonts/montserrat-extrabold-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
+:root {
+  --lightblue: #5BC8AF;
+  --mediumblue: #297C6B;
+  --darkblue: #194D44;
+  --black: #333333;
+  --whitetone: #EAEAEA;
+}
 /* =========================
    VIDEO SECTION
    ========================= */
@@ -23,22 +23,26 @@
 .video-bac-mobile2 {
   display: none;
 }
+
 .video-preview {
   width: 100%;
   height: 100%;
   display: block;
 }
+
 .video-sec {
   overflow: hidden;
   display: grid;
   grid-template-columns: 47% 1fr;
 }
+
 .video-sec .box {
   position: relative;
   margin: auto;
   top: 50%;
   transform: translateY(-50%);
 }
+
 .video-sec .txt {
   padding: 95px 0px;
   padding-left: 10%;
@@ -46,6 +50,7 @@
   position: relative;
   z-index: 2;
 }
+
 .video-sec .txt h5 {
   font-weight: 700;
   font-size: 44px;
@@ -54,27 +59,32 @@
   margin-bottom: 48px;
   color: #fff;
 }
+
 @supports (-webkit-text-stroke: 1px rgb(255, 255, 255)) {
   .video-sec .txt h5 span {
     -webkit-text-stroke: 1px #fff;
     -webkit-text-fill-color: rgba(255, 255, 255, 0);
   }
 }
+
 .video-sec .txt .check-box {
   display: grid;
   grid-template-columns: auto 1fr;
   column-gap: 25px;
   margin-bottom: 26px;
 }
+
 .video-sec .txt .check-box img {
   margin-top: 9px;
 }
+
 .video-sec .txt .check-box p {
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
   color: rgba(255, 255, 255, 0.8);
 }
+
 .video-sec .txt .check-box p span {
   display: block;
   font-weight: 700;
@@ -83,6 +93,7 @@
   margin-bottom: 8px;
   color: #FFFFFF;
 }
+
 .video-sec .txt .video-bac {
   position: absolute;
   top: 0px;
@@ -91,17 +102,21 @@
   height: 100%;
   z-index: -1;
 }
+
 .video-sec .txt .video-bac2 {
   opacity: 0.8;
   left: -8.5%;
   z-index: -2;
 }
+
 .video-sec .txt .video-bac2 path {
   fill: white;
 }
+
 .video-sec .video-img {
   position: relative;
 }
+
 .video-sec .video-img::after {
   content: '';
   background: rgba(25, 77, 68, 0.3);
@@ -112,11 +127,13 @@
   top: 0px;
   left: 0px;
 }
+
 .video-sec .video-img .bac {
   height: 100%;
   object-fit: cover;
   width: 100%;
 }
+
 .video-sec .video-img .play {
   position: absolute;
   width: 120px;
@@ -133,9 +150,11 @@
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
+
 .video-sec .video-img .play.plo {
   opacity: 0;
 }
+
 .video-sec .video-img .play::after {
   content: '';
   background: rgba(91, 200, 175, 0.1);
@@ -151,11 +170,13 @@
   border-radius: 106px;
   transition: all 0.2s ease-in-out;
 }
+
 .video-sec .video-img .play:hover::after {
   width: 208px;
   height: 208px;
   left: -46px;
 }
+
 .video-sec .video-img .play svg {
   width: 55px;
   height: 54px;
@@ -167,6 +188,7 @@
   bottom: 0px;
   margin: auto;
 }
+
 .video-sec .video-img .sm-logo {
   position: absolute;
   bottom: 33px;
@@ -180,32 +202,25 @@
   display: none;
   position: fixed;
   z-index: 9999;
-  left: 0; top: 0;
-  width: 100vw; height: 100vh;
-  background: rgba(0,0,0,0.7);
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
   align-items: center;
   justify-content: center;
 }
-.video-modal-content {
-  position: relative;
-  background: #fff;
-  border-radius: 8px;
-  padding: 16px;
-  max-width: 90vw;
-  max-height: 90vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  box-shadow: 0 8px 32px rgba(25,77,68,0.18);
-}
+
 .video-modal-close {
   position: absolute;
-  top: 8px; right: 16px;
+  top: 8px;
+  right: 16px;
   font-size: 2rem;
   color: #333;
   cursor: pointer;
   z-index: 2;
 }
+
 .video-modal video {
   width: 100%;
   height: auto;
@@ -213,4 +228,23 @@
   max-height: 70vh;
   border-radius: 8px;
   background: #000;
+}
+
+@media (max-width: 767px) {
+
+  .video-bac,
+  .video-bac2 {
+    display: none !important;
+  }
+
+  .video-bac-mobile,
+  .video-bac-mobile2 {
+    display: block !important;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: -44px;
+    left: 0;
+    z-index: -1;
+  }
 }
