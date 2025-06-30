@@ -219,6 +219,7 @@ a {
 }
 .jumbo-box .form-box .form .inp-row .inp-box {
   position: relative;
+  
 }
 .jumbo-box .form-box .form label {
   display: flex;
@@ -273,6 +274,40 @@ a {
 }
 .jumbo-box .form-box .form .sel option {
   color: #333;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px #EAEAEA inset !important;
+    -webkit-text-fill-color: #5BC8AF !important; 
+    transition: background-color 5000s ease-in-out 0s;
+}
+/* -----------Input border red on error----------------- */
+.inp-box.empty .inp,
+.drop-row.empty select {
+  border: 1px solid #e74c3c !important;
+}
+
+/*--------------Label text red on error---------------- */
+.inp-box.empty label span,
+.drop-row.empty label span {
+  color: #e74c3c !important;
+}
+
+/* -------------Label lines red on error--------------- */
+.inp-box.empty label::before,
+.inp-box.empty label::after,
+.inp-box.empty label span::after,
+.drop-row.empty label::before,
+.drop-row.empty label::after,
+.drop-row.empty label span::after {
+  background: #e74c3c !important;
+}
+/* ------------- */
+.jumbo-box .form-box .form.inp.error {
+    border: 2px solid #e74c3c !important;
+    outline: none !important;
 }
 .jumbo-box .form-box .form .inp:focus {
   border-color: #FFFFFF;
@@ -413,4 +448,14 @@ a {
     background: url('../img/icon/dropdown.svg') no-repeat right 1rem center/1.2em auto;
     padding-right: 2.5em;      
     border-radius: 4px;
+}
+#country option  {
+    background-color: #297C6B; 
+    color: #EAEAEA;             
+}
+
+/* For Firefox */
+#country:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #EAEAEA;
 }
