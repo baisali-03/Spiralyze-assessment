@@ -56,24 +56,57 @@ $(".nav-opener").click(function () {
 });
 function validate() {
   let num = 0;
-  $(".inp-box .inp").each(function () {
-    if (!$(this).val()) {
-      $(this).parent().addClass("empty");
-      $(this).addClass("error"); 
-    } else {
-      $(this).parent().removeClass("empty");
-      $(this).removeClass("error");
-      num = num + 1;
-    }
-  });
-
+  //---------------REGEX---------------------
+  const nameRegex = /^[A-Za-z\s'-]+$/;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  //-------------First Name---------------------
+  const fName = $("#f-name");
+  if (!fName.val() || !nameRegex.test(fName.val())) {
+    fName.parent().addClass("empty");
+    fName.addClass("error");
+  } else {
+    fName.parent().removeClass("empty");
+    fName.removeClass("error");
+    num++;
+  }
+  //---------------Last Name--------------------
+  const lName = $("#l-name");
+  if (!lName.val() || !nameRegex.test(lName.val())) {
+    lName.parent().addClass("empty");
+    lName.addClass("error");
+  } else {
+    lName.parent().removeClass("empty");
+    lName.removeClass("error");
+    num++;
+  }
+  //------------Email-------------------------
+  const bEmail = $("#b-name");
+  if (!bEmail.val() || !emailRegex.test(bEmail.val())) {
+    bEmail.parent().addClass("empty");
+    bEmail.addClass("error");
+  } else {
+    bEmail.parent().removeClass("empty");
+    bEmail.removeClass("error");
+    num++;
+  }
+  //-----------------Company (should be text, not empty)-----------
+  const cName = $("#c-name");
+  if (!cName.val() || !nameRegex.test(cName.val())) {
+    cName.parent().addClass("empty");
+    cName.addClass("error");
+  } else {
+    cName.parent().removeClass("empty");
+    cName.removeClass("error");
+    num++;
+  }
+  //------------Country select----------
   if ($(".drop-row select").val() == "") {
     $(".drop-row").addClass("empty");
     $(".drop-row select").addClass("error"); 
   } else {
     $(".drop-row").removeClass("empty");
     $(".drop-row select").removeClass("error"); 
-    num = num + 1;
+    num++;
   }
   if (num === 5) {
     document.location = "thankyou.html";

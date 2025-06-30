@@ -96,7 +96,6 @@ a {
 .jumbo-box::after{
   content: '';
   background-image: url(../img/curve-1-2.svg);
-  
 }
 .jumbo-box .container-cus{
 }
