@@ -96,8 +96,10 @@ a {
 .jumbo-box::after{
   content: '';
   background-image: url(../img/curve-1-2.svg);
+  
 }
-.jumbo-box .container-cus{}
+.jumbo-box .container-cus{
+}
 .jumbo-box .container-cus::before{
   content: '';
   background: linear-gradient(180deg, #194D41 0%, rgba(25, 77, 65, 0.7) 100%);
