@@ -43,6 +43,7 @@
   margin-bottom: 32px;
   font-family: 'montserratextrabold';
 }
+
 @supports (-webkit-text-stroke: 1px rgb(255, 255, 255)) {
   .about .about-text h3 span {
     -webkit-text-stroke: 1px #333;
@@ -54,6 +55,10 @@
   line-height: 24px;
   column-count: 3;
   column-gap: 35px;
+}
+.about .about-text p span.block-line {
+  display: block;
+  margin-top: 10px;
 }
 .about .about-text a {
   display: block;

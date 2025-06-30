@@ -229,22 +229,3 @@
   border-radius: 8px;
   background: #000;
 }
-
-@media (max-width: 767px) {
-
-  .video-bac,
-  .video-bac2 {
-    display: none !important;
-  }
-
-  .video-bac-mobile,
-  .video-bac-mobile2 {
-    display: block !important;
-    width: 100%;
-    height: auto;
-    position: absolute;
-    top: -44px;
-    left: 0;
-    z-index: -1;
-  }
-}
