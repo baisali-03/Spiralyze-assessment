@@ -281,13 +281,14 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0 1000px #EAEAEA inset !important;
-    -webkit-text-fill-color: #5BC8AF !important; 
+    -webkit-text-fill-color: red !important; 
     transition: background-color 5000s ease-in-out 0s;
 }
 /* -----------Input border red on error----------------- */
 .inp-box.empty .inp,
 .drop-row.empty select {
   border: 1px solid #e74c3c !important;
+  border-top: 0 !important;
 }
 
 /*--------------Label text red on error---------------- */
@@ -305,7 +306,6 @@ input:-webkit-autofill:active {
 .drop-row.empty label span::after {
   background: #e74c3c !important;
 }
-/* ------------- */
 .jumbo-box .form-box .form.inp.error {
     border: 2px solid #e74c3c !important;
     outline: none !important;
