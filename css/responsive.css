@@ -574,7 +574,8 @@
         width: 51%;
         margin-left: 32px;
         margin-top: -60px;
-        border-radius: 15px;
+        border-top-right-radius: 15px;
+        border-top-left-radius: 15px;
     }
 
     .testi-carousel .carousel-testi .item .txt {
