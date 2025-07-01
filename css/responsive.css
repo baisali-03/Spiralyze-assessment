@@ -380,25 +380,6 @@
     }
 }
 
-@media (max-width: 767px) {
-
-    .video-bac,
-    .video-bac2 {
-        display: none !important;
-    }
-
-    .video-bac-mobile,
-    .video-bac-mobile2 {
-        display: block !important;
-        width: 100%;
-        height: auto;
-        position: absolute;
-        top: -44px;
-        left: 0;
-        z-index: -1;
-    }
-}
-
 @media (min-width: 0px) and (max-width: 569px) {
     .jumbo-box {
         background-size: 219% auto;
@@ -523,11 +504,6 @@
 
     .jumbo-box .form-box .form .btn-row a {
         width: 100%;
-    }
-
-    .jumbo-box::before,
-    .jumbo-box::after {
-        /* background-size: 393%; */
     }
 
     .about {
@@ -713,6 +689,35 @@
     }
 }
 
+@media (max-width: 569px) {
+    .video-bac,
+    .video-bac2 {
+        display: none !important;
+    }
+    .video-bac-mobile,
+    .video-bac-mobile2 {
+        display: block !important;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: -40px;
+        left: 0;
+        z-index: -1;
+    }
+}
+
+@media (min-width: 570px) {
+    .video-bac,
+    .video-bac2 {
+        display: block !important;
+    }
+    .video-bac-mobile,
+    .video-bac-mobile2 {
+        display: none !important;
+    }
+}
+
+
 @media (min-width: 0px) and (max-width: 360px) {
 
     .video-sec .txt .video-bac,
@@ -745,14 +750,14 @@
     }
 
     .video-sec .txt .check-box p span {
-        font-size: 18px;
-        line-height: 14px;
+        font-size: 16px;
+        line-height: 20px;
         font-weight: 600;
     }
 
 }
 
-@media (max-width: 569px) {
+@media (min-width: 361px) and (max-width: 569px) {
     .jumbo-box {
         position: relative;
         overflow: hidden;
