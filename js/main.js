@@ -15,6 +15,9 @@ $(".carousel-testi").owlCarousel({
   loop: true,
   nav: false,
   dots: true,
+  autoplay: true,
+  autoplayTimeout: 2000,
+  autoplayHoverPause: true,
   responsive: {
     0: {
       items: 1,
