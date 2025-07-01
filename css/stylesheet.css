@@ -277,16 +277,12 @@ a {
   color: #333;
 }
 input:-webkit-autofill,
-#country:-webkit-autofill,
 input:-webkit-autofill:focus,
-#country:-webkit-autofill:focus,
 input:-webkit-autofill:hover,
-#country:-webkit-autofill:hover,
-input:-webkit-autofill:active,
-#country:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0 1000px #EAEAEA inset !important;
-    -webkit-text-fill-color: red !important; 
-    transition: background-color 5000s ease-in-out 0s;
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px rgba(255,255,255,0.04) inset !important;
+    -webkit-text-fill-color: #fff !important;
+    background-color: rgba(255,255,255,0.04) !important;
 }
 /* -----------Input border red on error----------------- */
 .inp-box.empty .inp,
@@ -472,4 +468,27 @@ background-color: #35bb9c;
 #country option {
     background-color: #297C6B;
     color: #EAEAEA;
+}
+Autofill fix for Chrome, Safari, Edge
+#country:-webkit-autofill,
+#country:-webkit-autofill:focus,
+#country:-webkit-autofill:hover,
+#country:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px rgba(255,255,255,0.04) inset !important;
+    -webkit-text-fill-color: #fff !important;
+    background-color: rgba(255,255,255,0.04) !important;
+    color: #fff !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+/* Autofill fix for Firefox */
+#country:-moz-autofill {
+    box-shadow: 0 0 0 1000px rgba(255,255,255,0.04) inset !important;
+    -moz-text-fill-color: #fff !important;
+    background-color: rgba(255,255,255,0.04) !important;
+    color: #fff !important;
+}
+/* For Firefox accessibility focus ring */
+#country:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #EAEAEA;
 }
