@@ -689,61 +689,71 @@
     }
 }
 
-@media (max-width: 569px) {
-    .video-bac,
-    .video-bac2 {
-        display: none !important;
-    }
-    .video-bac-mobile,
-    .video-bac-mobile2 {
-        display: block !important;
-        width: 100%;
-        height: auto;
-        position: absolute;
-        top: -40px;
-        left: 0;
-        z-index: -1;
-    }
+/* Remove old rules for 569px/570px */
+
+@media (max-width: 426px) {
+  .video-bac,
+  .video-bac2 {
+    display: none !important;
+  }
+  .video-bac-mobile,
+  .video-bac-mobile2 {
+    display: block !important;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: -40px;
+    left: 0;
+    z-index: -1;
+  }
 }
 
-@media (min-width: 570px) {
-    .video-bac,
-    .video-bac2 {
-        display: block !important;
+@media (min-width: 768px) {
+  .video-bac,
+  .video-bac2 {
+    display: block !important;
+  }
+  .video-bac-mobile,
+  .video-bac-mobile2 {
+    display: none !important;
+  }
+}
+@media (min-width: 361px) and (max-width: 425px) {
+     .video-sec .txt h5 {
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 40px;
+        text-align: center;
+        margin-bottom: 15px;
     }
-    .video-bac-mobile,
-    .video-bac-mobile2 {
-        display: none !important;
+     .video-sec .txt .check-box p span {
+        font-size: 16px;
+        line-height: 20px;
+        font-weight: 600;
+    }
+     .video-sec .txt .check-box p {
+        font-size: 16px;
+        line-height: 20px;
     }
 }
-
 
 @media (min-width: 0px) and (max-width: 360px) {
 
-    .video-sec .txt .video-bac,
-    .video-sec .txt .video-bac2 {
+    .video-sec .txt
+    .video-sec .txt  {
         width: 255%;
         height: 134%;
     }
 
-    .video-sec .txt h5 {
-        font-weight: 600;
-        font-size: 36px;
-        line-height: 48px;
-        letter-spacing: 0%;
-        text-align: center;
-        vertical-align: middle;
-    }
-
     .video-sec .txt .check-box p {
-        font-size: 13px;
-        line-height: 14px;
+        font-size: 14px;
+        line-height: 16px;
     }
 
     .video-sec .txt h5 {
         font-weight: 600;
-        font-size: 28px;
-        line-height: 40px;
+        font-size: 24px;
+        line-height: 32px;
         text-align: center;
         margin-bottom: 15px;
 
@@ -751,7 +761,7 @@
 
     .video-sec .txt .check-box p span {
         font-size: 16px;
-        line-height: 20px;
+        line-height: 18px;
         font-weight: 600;
     }
 
