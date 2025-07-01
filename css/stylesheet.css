@@ -277,13 +277,11 @@ a {
   color: #333;
 }
 input:-webkit-autofill,
-input:-webkit-autofill,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:active {
-    -webkit-box-shadow: 0 0 0 1000px rgba(255,255,255,0.04) inset !important;
-    -webkit-text-fill-color: #fff !important;
-    background-color: rgba(255,255,255,0.04) !important;
+    -webkit-box-shadow: 0 0 0 1000px #EAEAEA inset !important;
+    -webkit-text-fill-color: red !important; 
     transition: background-color 5000s ease-in-out 0s;
 }
 /* -----------Input border red on error----------------- */
@@ -449,19 +447,46 @@ background-color: #35bb9c;
 }
 
 #country {
-    appearance: none;           
-    -webkit-appearance: none;   
-    -moz-appearance: none;      
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
     background: url('../img/icon/dropdown.svg') no-repeat right 1rem center/1.2em auto;
-    padding-right: 2.5em;      
+    padding-right: 2.5em;
     border-radius: 4px;
+    background-color: rgba(255,255,255,0.04);
+    color: #fff;
+    border: 1px solid rgb(197 197 197);
+    border-top: 0;
+    height: 48px;
+    transition: background-color 0.3s, color 0.3s;
 }
-#country option  {
-    background-color: #297C6B; 
-    color: #EAEAEA;             
+#country:focus {
+    border-color: #FFFFFF;
+    background-color: rgb(255 255 255 / 0%);
+    color: #fff;
 }
-
-/* For Firefox */
+#country option {
+    background-color: #297C6B;
+    color: #EAEAEA;
+}
+/*-----------Autofill fix for Chrome, Safari, Edge-------------*/
+#country:-webkit-autofill,
+#country:-webkit-autofill:focus,
+#country:-webkit-autofill:hover,
+#country:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 1000px rgba(255,255,255,0.04) inset !important;
+    -webkit-text-fill-color: #fff !important;
+    background-color: rgba(255,255,255,0.04) !important;
+    color: #fff !important;
+    transition: background-color 5000s ease-in-out 0s;
+}
+/*----------------Autofill fix for Firefox----------------*/
+#country:-moz-autofill {
+    box-shadow: 0 0 0 1000px rgba(255,255,255,0.04) inset !important;
+    -moz-text-fill-color: #fff !important;
+    background-color: rgba(255,255,255,0.04) !important;
+    color: #fff !important;
+}
 #country:-moz-focusring {
     color: transparent;
     text-shadow: 0 0 0 #EAEAEA;
