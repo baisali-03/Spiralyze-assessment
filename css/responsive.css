@@ -262,8 +262,8 @@
 
     .testi-carousel .carousel-testi .item {
         grid-template-columns: 198px 1fr;
-        padding: 10px 0%;
         column-gap: 25px;
+          padding: 10px 0%;
     }
 
     .testi-carousel .carousel-testi .item .txt {
@@ -574,8 +574,7 @@
         width: 51%;
         margin-left: 32px;
         margin-top: -60px;
-        border-top-right-radius: 15px;
-        border-top-left-radius: 15px;
+        border-radius: 15px;
     }
 
     .testi-carousel .carousel-testi .item .txt {

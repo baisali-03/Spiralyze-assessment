@@ -43,11 +43,9 @@
   grid-template-columns: 270px 1fr;
   column-gap: 34px;
   padding: 20px 2%;
-  min-height: 340px;
-  height: 340px;
-  align-items: stretch;
 }
 .testi-carousel .carousel-testi .item .img {
+  
   overflow: hidden;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
@@ -91,6 +89,9 @@
   justify-content: center;
   column-gap: 36px;
   margin-top: 56px;
+}
+.testi-carousel .carousel-testi .owl-dots .owl-dot{
+
 }
 .testi-carousel .carousel-testi .owl-dots .owl-dot span {
   width: 16px;
