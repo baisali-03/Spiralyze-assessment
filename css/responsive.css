@@ -493,6 +493,10 @@
         padding-top: 14px;
     }
 
+    .drop-row label {
+        pointer-events: none;
+    }
+
     .jumbo-box .form-box .form .empty-tooltp {
         left: 0px;
         right: 0px;
