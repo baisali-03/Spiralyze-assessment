@@ -1,17 +1,20 @@
 @media (min-width: 2560px) {
-  .jumbo-box::before {
-    background-image: url(../img/curve-1-1-4k.svg);
-  }
-  .jumbo-box::after {
-    background-image: url(../img/curve-1-2-4k.svg);
-  }
+    .jumbo-box::before {
+        background-image: url(../img/curve-1-1-4k.svg);
+    }
+
+    .jumbo-box::after {
+        background-image: url(../img/curve-1-2-4k.svg);
+    }
 }
+
 @media (width: 768px) {
-  .jumbo-box::before {
-    background-image: url(../img/curve-1-1-tab.svg);
-  }
+    .jumbo-box::before {
+        background-image: url(../img/curve-1-1-tab.svg);
+    }
 
 }
+
 .nav-opener {
     display: none;
 }
@@ -39,6 +42,7 @@
 }
 
 @media (min-width: 770px) and (max-width: 1024px) {
+
 
     .jumbo-box::before,
     .jumbo-box::after {
@@ -164,6 +168,7 @@
 
     .video-sec .txt h5 {
         font-size: 38px;
+        text-align: center;
     }
 
     .video-sec .txt .check-box p {
@@ -206,7 +211,7 @@
 
     .jumbo-box .c-navbar ul li a {
         line-height: 41px;
-      
+
     }
 
     .jumbo-box .c-navbar ul li:last-child {
@@ -277,7 +282,7 @@
     .testi-carousel .carousel-testi .item {
         grid-template-columns: 198px 1fr;
         column-gap: 25px;
-          padding: 10px 0%;
+        padding: 10px 0%;
     }
 
     .testi-carousel .carousel-testi .item .txt {
@@ -460,7 +465,7 @@
     .jumbo-box .c-navbar ul li a {
         line-height: 38px;
         font-size: 13px;
-       ;
+        ;
         padding: 0px 16px;
     }
 
@@ -706,46 +711,53 @@
 /* Remove old rules for 569px/570px */
 
 @media (max-width: 426px) {
-  .video-bac,
-  .video-bac2 {
-    display: none !important;
-  }
-  .video-bac-mobile,
-  .video-bac-mobile2 {
-    display: block !important;
-    width: 100%;
-    height: auto;
-    position: absolute;
-    top: -40px;
-    left: 0;
-    z-index: -1;
-  }
+
+    .video-bac,
+    .video-bac2 {
+        display: none !important;
+    }
+
+    .video-bac-mobile,
+    .video-bac-mobile2 {
+        display: block !important;
+        width: 100%;
+        height: auto;
+        position: absolute;
+        top: -40px;
+        left: 0;
+        z-index: -1;
+    }
 }
 
 @media (min-width: 768px) {
-  .video-bac,
-  .video-bac2 {
-    display: block !important;
-  }
-  .video-bac-mobile,
-  .video-bac-mobile2 {
-    display: none !important;
-  }
+
+    .video-bac,
+    .video-bac2 {
+        display: block !important;
+    }
+
+    .video-bac-mobile,
+    .video-bac-mobile2 {
+        display: none !important;
+    }
 }
+
 @media (min-width: 361px) and (max-width: 425px) {
-     .video-sec .txt h5 {
+    .video-sec .txt h5 {
         font-weight: 600;
         font-size: 28px;
         line-height: 40px;
         text-align: center;
         margin-bottom: 15px;
     }
-     .video-sec .txt .check-box p span {
+
+    .video-sec .txt .check-box p span {
         font-size: 18px;
         line-height: 22px;
         font-weight: 600;
     }
-     .video-sec .txt .check-box p {
+
+    .video-sec .txt .check-box p {
         font-size: 16px;
         line-height: 20px;
     }
@@ -753,8 +765,7 @@
 
 @media (min-width: 0px) and (max-width: 360px) {
 
-    .video-sec .txt
-    .video-sec .txt  {
+    .video-sec .txt .video-sec .txt {
         width: 255%;
         height: 134%;
     }
