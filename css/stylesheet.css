@@ -176,7 +176,7 @@ a {
 }
 
 .jumbo-box .c-navbar ul li {
-  display: block;
+  display: inline-flex;
   margin-left: 20px;
 }
 

@@ -183,7 +183,6 @@
     }
 
     .jumbo-box .c-navbar ul {
-        display: block;
         text-align: right;
     }
 
@@ -193,6 +192,7 @@
 
     .jumbo-box .c-navbar ul li a {
         line-height: 41px;
+      
     }
 
     .jumbo-box .c-navbar ul li:last-child {
@@ -439,19 +439,19 @@
     }
 
     .jumbo-box .c-navbar ul li {
-        display: block;
+        display: flex;
         margin-left: 0px;
     }
 
     .jumbo-box .c-navbar ul li a {
         line-height: 38px;
         font-size: 13px;
-        display: block;
+       ;
         padding: 0px 16px;
     }
 
     .nav-opener {
-        display: block;
+        display: flex;
     }
 
     .jumbo-box .form-box .txt h1 {

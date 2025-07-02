@@ -8,6 +8,10 @@ $(window).on("load", function () {
     } else {
       $(this).removeClass("focus");
     }
+    // Remove was-focused if value is present
+    if ($(this).val() !== "") {
+      $(this).removeClass("was-focused");
+    }
   });
 
   // Floating label for select (country)
@@ -62,17 +66,47 @@ function playPause() {
   }
 }
 
+let menuOpen = false;
+
 $(".nav-opener").click(function () {
-  $(".c-navbar ul").animate({
-    height: "toggle",
-  });
+  var $menu = $(".c-navbar ul");
+  menuOpen = !menuOpen;
+  if (menuOpen) {
+    $menu.stop(true, true).slideDown(200);
+  } else {
+    $menu.stop(true, true).slideUp(200);
+  }
 });
+
+$(window).on("resize", function () {
+  var $menu = $(".c-navbar ul");
+  var winWidth = $(window).width();
+  //-------------------Reset state on Tab View--------------------------------
+  if (winWidth >= 768) {
+    $menu.stop(true, true).css("display", "flow");
+    menuOpen = false; 
+  } 
+  //-----------------Reset state on desktop-------------------------
+  else if (winWidth >= 1024) {
+    $menu.stop(true, true).css("display", "flex");
+    menuOpen = false; 
+  } 
+    else {
+    if (menuOpen) {
+      $menu.stop(true, true).css("display", "flex");
+    } else {
+      $menu.stop(true, true).css("display", "none");
+    }
+  }
+});
+$(window).trigger("resize");
+
 function validate() {
-  // Hide all previous errors
+  //--------------------Hide all previous errors---------------------------------
   $(".inp-box").removeClass("empty");
-  $(".inp").removeClass("error");
+  $(".inp").removeClass("error was-focused");
   $(".drop-row").removeClass("empty");
-  $(".drop-row select").removeClass("error");
+  $(".drop-row select").removeClass("error was-focused");
 
   // REGEX
   const nameRegex = /^[A-Za-z\s'-]+$/;
@@ -82,34 +116,34 @@ function validate() {
   const fName = $("#f-name");
   if (!fName.val() || !nameRegex.test(fName.val())) {
     fName.parent().addClass("empty");
-    fName.addClass("error");
+    fName.addClass("error was-focused");
     return;
   }
   // Last Name
   const lName = $("#l-name");
   if (!lName.val() || !nameRegex.test(lName.val())) {
     lName.parent().addClass("empty");
-    lName.addClass("error");
+    lName.addClass("error was-focused");
     return;
   }
   // Email
   const bEmail = $("#b-name");
   if (!bEmail.val() || !emailRegex.test(bEmail.val())) {
     bEmail.parent().addClass("empty");
-    bEmail.addClass("error");
+    bEmail.addClass("error was-focused");
     return;
   }
   // Company
   const cName = $("#c-name");
   if (!cName.val() || !nameRegex.test(cName.val())) {
     cName.parent().addClass("empty");
-    cName.addClass("error");
+    cName.addClass("error was-focused");
     return;
   }
   // Country
   if ($(".drop-row select").val() == "") {
     $(".drop-row").addClass("empty");
-    $(".drop-row select").addClass("error");
+    $(".drop-row select").addClass("error was-focused");
     return;
   }
   // If all valid
