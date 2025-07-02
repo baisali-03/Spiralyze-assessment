@@ -6,6 +6,57 @@
     .jumbo-box::after {
         background-image: url(../img/curve-1-2-4k.svg);
     }
+
+    .jumbo-box .form-box .txt p {
+        font-size: 22px;
+        line-height: 30px;
+        width:40vw;
+    }
+
+    .video-sec .txt h5 {
+        font-weight: 800;
+        font-size: 64px;
+        line-height: 48px;
+    }
+
+    .video-sec .txt .check-box p span {
+        font-size: 36px;
+        line-height: 36px;
+    }
+
+    .video-sec .txt .check-box p {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .about .about-text h3 {
+        font-size: 48px;
+        line-height: 48px;
+    }
+
+    .about .about-text p {
+        font-size: 18px;
+        line-height: 24px;
+
+    }
+
+    .organize h5 {
+        font-size: 48px;
+        line-height: 48px;
+    }
+
+    .organize .txt .itl {
+
+        font-size: 22px;
+
+    }
+
+    .organize .txt .disc {
+        font-size: 18px;
+
+
+    }
 }
 
 @media (width: 768px) {
