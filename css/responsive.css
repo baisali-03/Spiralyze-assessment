@@ -6,6 +6,12 @@
     background-image: url(../img/curve-1-2-4k.svg);
   }
 }
+@media (width: 768px) {
+  .jumbo-box::before {
+    background-image: url(../img/curve-1-1-tab.svg);
+  }
+
+}
 .nav-opener {
     display: none;
 }
