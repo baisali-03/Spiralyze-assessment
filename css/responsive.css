@@ -1,3 +1,11 @@
+@media (min-width: 2560px) {
+  .jumbo-box::before {
+    background-image: url(../img/curve-1-1-4k.svg);
+  }
+  .jumbo-box::after {
+    background-image: url(../img/curve-1-2-4k.svg);
+  }
+}
 .nav-opener {
     display: none;
 }
