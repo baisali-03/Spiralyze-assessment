@@ -58,62 +58,52 @@ $(".nav-opener").click(function () {
   });
 });
 function validate() {
-  let num = 0;
-  //---------------REGEX---------------------
+  // Hide all previous errors
+  $(".inp-box").removeClass("empty");
+  $(".inp").removeClass("error");
+  $(".drop-row").removeClass("empty");
+  $(".drop-row select").removeClass("error");
+
+  // REGEX
   const nameRegex = /^[A-Za-z\s'-]+$/;
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  //-------------First Name---------------------
+
+  // First Name
   const fName = $("#f-name");
   if (!fName.val() || !nameRegex.test(fName.val())) {
     fName.parent().addClass("empty");
     fName.addClass("error");
-  } else {
-    fName.parent().removeClass("empty");
-    fName.removeClass("error");
-    num++;
+    return;
   }
-  //---------------Last Name--------------------
+  // Last Name
   const lName = $("#l-name");
   if (!lName.val() || !nameRegex.test(lName.val())) {
     lName.parent().addClass("empty");
     lName.addClass("error");
-  } else {
-    lName.parent().removeClass("empty");
-    lName.removeClass("error");
-    num++;
+    return;
   }
-  //------------Email-------------------------
+  // Email
   const bEmail = $("#b-name");
   if (!bEmail.val() || !emailRegex.test(bEmail.val())) {
     bEmail.parent().addClass("empty");
     bEmail.addClass("error");
-  } else {
-    bEmail.parent().removeClass("empty");
-    bEmail.removeClass("error");
-    num++;
+    return;
   }
-  //-----------------Company (should be text, not empty)-----------
+  // Company
   const cName = $("#c-name");
   if (!cName.val() || !nameRegex.test(cName.val())) {
     cName.parent().addClass("empty");
     cName.addClass("error");
-  } else {
-    cName.parent().removeClass("empty");
-    cName.removeClass("error");
-    num++;
+    return;
   }
-  //------------Country select----------
+  // Country
   if ($(".drop-row select").val() == "") {
     $(".drop-row").addClass("empty");
-    $(".drop-row select").addClass("error"); 
-  } else {
-    $(".drop-row").removeClass("empty");
-    $(".drop-row select").removeClass("error"); 
-    num++;
+    $(".drop-row select").addClass("error");
+    return;
   }
-  if (num === 5) {
-    document.location = "thankyou.html";
-  }
+  // If all valid
+  document.location = "thankyou.html";
 }
 $(document).click(function () {
   $(".inp-box .inp").each(function () {
