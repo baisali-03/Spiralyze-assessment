@@ -450,10 +450,6 @@
         padding: 0px 16px;
     }
 
-    .jumbo-box .c-navbar ul li:last-child {
-        display: none;
-    }
-
     .nav-opener {
         display: block;
     }

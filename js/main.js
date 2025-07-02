@@ -1,8 +1,18 @@
 $(window).on("load", function () {
   $(".form input").val("");
 
-  $(".form input").focusout(function () {
-    if ($(this).val() != "") {
+  // Floating label for input
+  $(".form input").on("focus blur input", function () {
+    if ($(this).val() !== "" || $(this).is(":focus")) {
+      $(this).addClass("focus");
+    } else {
+      $(this).removeClass("focus");
+    }
+  });
+
+  // Floating label for select (country)
+  $("#country").on("focus blur change", function () {
+    if ($(this).val() !== "" || $(this).is(":focus")) {
       $(this).addClass("focus");
     } else {
       $(this).removeClass("focus");
