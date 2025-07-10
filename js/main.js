@@ -1,58 +1,62 @@
-$(window).on("load", function () {
-  $(".form input").val("");
-
-  // Floating label for input
-  $(".form input").on("focus blur input", function () {
-    if ($(this).val() !== "" || $(this).is(":focus")) {
-      $(this).addClass("focus");
-    } else {
-      $(this).removeClass("focus");
-    }
-    // Remove was-focused if value is present
-    if ($(this).val() !== "") {
-      $(this).removeClass("was-focused");
-    }
+window.addEventListener("load", function () {
+  document.querySelectorAll(".form input").forEach(function (input) {
+    input.value = "";
+    input.addEventListener("focus", handleInputFocusBlurInput);
+    input.addEventListener("blur", handleInputFocusBlurInput);
+    input.addEventListener("input", handleInputFocusBlurInput);
   });
+  var country = document.getElementById("country");
+  if (country) {
+    country.addEventListener("focus", handleCountryFocusBlurChange);
+    country.addEventListener("blur", handleCountryFocusBlurChange);
+    country.addEventListener("change", handleCountryFocusBlurChange);
+  }
+});
 
-  // Floating label for select (country)
-  $("#country").on("focus blur change", function () {
-    if ($(this).val() !== "" || $(this).is(":focus")) {
-      $(this).addClass("focus");
-    } else {
-      $(this).removeClass("focus");
-    }
+function handleInputFocusBlurInput(e) {
+  var input = e.target;
+  if (input.value !== "" || document.activeElement === input) {
+    input.classList.add("focus");
+  } else {
+    input.classList.remove("focus");
+  }
+  if (input.value !== "") {
+    input.classList.remove("was-focused");
+  }
+}
+
+function handleCountryFocusBlurChange(e) {
+  var select = e.target;
+  if (select.value !== "" || document.activeElement === select) {
+    select.classList.add("focus");
+  } else {
+    select.classList.remove("focus");
+  }
+}
+
+// -------------------Carousel-------------------
+$(function () {
+  $(".carousel-testi").owlCarousel({
+    loop: true,
+    nav: false,
+    dots: true,
+    autoplay: true,
+    autoplayTimeout: 2000,
+    autoplayHoverPause: true,
+    responsive: {
+      0: { items: 1 },
+      600: { items: 1 },
+      1024: { items: 1 },
+      1025: { items: 1 },
+    },
   });
-});
-
-/* Crousel Scripts*/
-$(".carousel-testi").owlCarousel({
-  loop: true,
-  nav: false,
-  dots: true,
-  autoplay: true,
-  autoplayTimeout: 2000,
-  autoplayHoverPause: true,
-  responsive: {
-    0: {
-      items: 1,
-    },
-    600: {
-      items: 1,
-    },
-    1024: {
-      items: 1,
-    },
-    1025: {
-      items: 1,
-    },
-  },
-});
-var owl = $(".carousel-testi");
-$(".testi-carousel .arrow-left").click(function () {
-  owl.trigger("prev.owl.carousel");
-});
-$(".testi-carousel .arrow-right").click(function () {
-  owl.trigger("next.owl.carousel");
+  var owl = $(".carousel-testi");
+  $(".testi-carousel .arrow-left").click(function () {
+    owl.trigger("prev.owl.carousel");
+  });
+  $(".testi-carousel .arrow-right").click(function () {
+    owl.trigger("next.owl.carousel");
+  });
 });
 
 function playPause() {
@@ -109,7 +113,7 @@ function validate() {
   $(".drop-row select").removeClass("error was-focused");
 
   // REGEX
-  const nameRegex = /^[A-Za-z\s'-]+$/;
+  const nameRegex = /^[A-Za-z]+$/;
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   // First Name
@@ -181,3 +185,21 @@ window.onclick = function (event) {
     closeVideoModal();
   }
 };
+
+// Throttle utility function
+function throttle(func, limit) {
+  let inThrottle;
+  return function (...args) {
+    const context = this;
+    if (!inThrottle) {
+      func.apply(context, args);
+      inThrottle = true;
+      setTimeout(() => (inThrottle = false), limit);
+    }
+  };
+}
+
+// Throttled validate for submit button
+const throttledValidate = throttle(validate, 1000);
+
+$(".btn-submit").click(throttledValidate);
